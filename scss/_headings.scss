@@ -1,0 +1,36 @@
+@use "variables";
+
+%h1-and-h2-patterns {
+  font-family: variables.$primary-font;
+  font-weight: 700;
+  letter-spacing: -1;
+  color: variables.$gray-500;
+}
+
+%h3-and-h4-patterms {
+  font-family: variables.$primary-font;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: variables.$gray-500;
+}
+
+h1 {
+  @extend %h1-and-h2-patterns;
+  font-size: 64px;
+  line-height: 73px;
+}
+
+h2 {
+  @extend %h1-and-h2-patterns;
+  font-size: 40px;
+}
+
+h3 {
+  @extend %h3-and-h4-patterns;
+  font-size: 24px;
+}
+
+h4 {
+  @extend %h3-and-h4-patterns;
+  font-size: 20px;
+}
