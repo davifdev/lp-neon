@@ -44,23 +44,23 @@
 
 .card {
   background-color: variables.$gray-100-opacity;
-  padding: 37px 32px;
+  padding: 3.7rem 3.2rem;
   width: 100%;
-  max-width: 384px;
-  border-radius: 8px;
+  max-width: 38.4rem;
+  border-radius: 0.8rem;
   .card-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
     p {
       font-weight: 700;
       line-height: 112%;
-      font-size: 18px;
+      font-size: 1.8rem;
     }
   }
   .card-description {
     color: variables.$gray-400;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
