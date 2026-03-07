@@ -1,0 +1,66 @@
+@use "variables";
+
+%btn-patterns {
+  display: inline-block;
+  font-family: variables.$primary-font;
+  line-height: 48x;
+  padding: 16px 27px;
+  border-radius: 122px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  @extend %btn-patterns;
+  color: #855b35;
+  background-color: variables.$brand-yellow;
+
+  &:hover {
+    background-color: #ffdc5c;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-patterns;
+  color: variables.$brand-light-blue;
+  border: 1px solid variables.$brand-light-blue;
+
+  &:hover {
+    background-color: variables.$brand-light-blue;
+    color: variables.$white;
+  }
+
+  &.isWhite {
+    color: variables.$white;
+    border: 1px solid variables.$white;
+
+    &:hover {
+      background-color: variables.$white;
+      color: variables.$brand-light-blue;
+    }
+  }
+}
+
+.card {
+  background-color: variables.$gray-100-opacity;
+  padding: 37px 32px;
+  width: 100%;
+  max-width: 384px;
+  border-radius: 8px;
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+    p {
+      font-weight: 700;
+      line-height: 112%;
+      font-size: 18px;
+    }
+  }
+  .card-description {
+    color: variables.$gray-400;
+    font-size: 18px;
+  }
+}
