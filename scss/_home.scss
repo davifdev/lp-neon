@@ -35,7 +35,7 @@
         display: flex;
         align-items: center;
         gap: 1.2rem;
-        ugytgtytytu .icon {
+        .icon {
           width: 4.8rem;
           height: 4.8rem;
           background: linear-gradient(
@@ -81,6 +81,71 @@
       &.image-03 {
         top: 20.2rem;
         left: 11.8rem;
+      }
+    }
+  }
+}
+
+.s-benefits {
+  padding-top: 12.9rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .area-left {
+    width: 100%;
+    max-width: 27.7rem;
+    position: relative;
+    .image-mockup {
+      position: absolute;
+      top: 8.7rem;
+      right: 114px;
+      z-index: -1;
+    }
+  }
+  .area-right {
+    width: 100%;
+    max-width: 80rem;
+    h2 {
+      max-width: 48.8rem;
+      margin-bottom: 1.6rem;
+    }
+    ul {
+      li {
+        display: flex;
+        gap: 4.3rem;
+        padding: 3.3rem 0;
+        border-bottom: 0.1rem solid #e1e0e7;
+        .description {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            color: variables.$gray-400;
+            font-weight: 500;
+          }
+          p {
+            color: variables.$gray-300;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 3.2rem;
+      color: variables.$brand-blue;
+      font-size: 1.8rem;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        width: 1rem;
+        margin-left: 0.8rem;
+        background-color: variables.$brand-yellow;
       }
     }
   }
