@@ -1,0 +1,32 @@
+@use "variables";
+
+header {
+  background-color: variables.$brand-blue;
+  height: 88px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  border-bottom: 2px solid variables.$white;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 5.9rem;
+    ul {
+      display: flex;
+      gap: 4.8rem;
+      li {
+        a {
+          color: variables.$white;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
