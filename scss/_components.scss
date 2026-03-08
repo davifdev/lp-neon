@@ -3,10 +3,9 @@
 %btn-patterns {
   display: inline-block;
   font-family: variables.$primary-font;
-  line-height: 48x;
-  padding: 16px 27px;
-  border-radius: 122px;
-  font-size: 16px;
+  padding: 1.6rem 2.7rem;
+  border-radius: 12.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   transition: all 0.3s;
 }
@@ -24,7 +23,7 @@
 .btn-secondary {
   @extend %btn-patterns;
   color: variables.$brand-light-blue;
-  border: 1px solid variables.$brand-light-blue;
+  border: 0.1rem solid variables.$brand-light-blue;
 
   &:hover {
     background-color: variables.$brand-light-blue;
@@ -33,7 +32,7 @@
 
   &.isWhite {
     color: variables.$white;
-    border: 1px solid variables.$white;
+    border: 0.1rem solid variables.$white;
 
     &:hover {
       background-color: variables.$white;
