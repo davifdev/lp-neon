@@ -27,5 +27,27 @@ header {
         }
       }
     }
+    .btn-mobile {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .header-navigation {
+      .btn-mobile {
+        display: block;
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header-navigation {
+      .btn-secondary {
+        display: none;
+      }
+    }
   }
 }
