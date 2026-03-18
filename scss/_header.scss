@@ -8,12 +8,41 @@ header {
   left: 0;
   display: flex;
   border-bottom: 0.2rem solid rgba(255, 255, 255, 0.204);
+  z-index: 10;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    .dropdown {
+      position: absolute;
+      top: 8rem;
+      background-color: #fff;
+      width: 100%;
+      max-width: 37.3rem;
+      .content {
+        max-width: 29.8rem;
+        border-bottom: 0.5rem solid #ffdc5c;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 2.8rem;
+          li {
+            h3 {
+              color: variales.$gray-400;
+              font-size: 1.6rem;
+            }
+            p {
+              color: #8c8a97;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
   }
   .header-navigation {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 5.9rem;
@@ -31,6 +60,23 @@ header {
       display: none;
     }
   }
+  .area-menu {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    .menu-mobile {
+      transition: all 0.3s;
+      margin-left: -100%;
+    }
+    &.active {
+      .menu-mobile {
+        margin-left: 0;
+      }
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 
   @media (max-width: 991px) {
     .header-navigation {
@@ -44,9 +90,49 @@ header {
   }
 
   @media (max-width: 600px) {
+    .area-menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.151);
+      z-index: 999 !important;
+      .menu-mobile {
+        background-color: variables.$brand-blue;
+        width: 40rem;
+        height: 100vh;
+        padding: 1.8rem;
+        .header-navigation {
+          ul {
+            margin-top: 8rem;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            li {
+              a {
+                color: aliceblue;
+              }
+            }
+          }
+        }
+      }
+    }
     .header-navigation {
+      .btn-mobile {
+        z-index: 3;
+      }
       .btn-secondary {
         display: none;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .area-menu {
+      .menu-mobile {
+        width: 30rem;
       }
     }
   }

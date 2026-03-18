@@ -20,3 +20,13 @@ const swiper = new Swiper(".depoyments", {
     },
   },
 });
+
+const btnMobile = document.querySelector(".btn-mobile");
+const areaMenu = document.querySelector(".area-menu");
+
+function handleClick() {
+  areaMenu.classList.toggle("active");
+}
+
+btnMobile.addEventListener("click", handleClick);
+areaMenu.addEventListener("click", handleClick);
