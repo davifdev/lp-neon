@@ -11,6 +11,10 @@ footer {
     ul {
       display: flex;
       gap: 3rem;
+      .social-media {
+        display: flex;
+        gap: 3rem;
+      }
       p {
         font-size: 1.4rem;
         color: rgba(255, 255, 255, 0.703);
@@ -88,6 +92,63 @@ footer {
       font-size: 1.4rem;
       color: rgba(255, 255, 255, 0.803);
       max-width: 70rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .main-content {
+      position: relative;
+      ul {
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 14rem;
+        justify-content: flex-start;
+      }
+      .area-right {
+        position: absolute;
+        bottom: 7.3rem;
+        right: 165px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .main-content {
+      .area-right {
+        right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3.2rem;
+      padding: 2.8rem 0;
+      ul {
+        flex-direction: column;
+      }
+    }
+    flex-direction: column;
+    align-items: center;
+    .main-content {
+      padding: 2.7rem 0;
+      position: relative;
+      flex-direction: column;
+      ul {
+        justify-content: space-between;
+        gap: 2.3rem;
+      }
+      .area-right {
+        position: static;
+      }
+    }
+    .message-footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
   }
 }
