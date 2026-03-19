@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
 
@@ -60,46 +61,45 @@
     />
   </head>
   <body>
-    <header>
+    <header class="js-header">
       <div class="container" role="container">
-        <div class="dropdown">
-          <div class="content">
-            <ul>
-              <li>
-                <h3>Cartão de crédito</h3>
-                <p>Cartão de crédito sem anuidade</p>
-              </li>
-              <li>
-                <h3>Cartão pré pago</h3>
-                <p>Cartão de débito internacional Neon</p>
-              </li>
-              <li>
-                <h3>Neon Mais</h3>
-                <p>4 saques grátis para quem compra com a Neon</p>
-              </li>
-              <li>
-                <h3>Investimentos</h3>
-                <p>A evolução da poupança</p>
-              </li>
-              <li>
-                <h3>Empréstimo pessoal</h3>
-                <p>Faça uma simulação de empréstimo pessoal</p>
-              </li>
-            </ul>
-          </div>
-        </div>
         <a href="#" aria-label="Logo do Banco Neon">
           <img src="./img/logo.svg" alt="Logo do Banco Neon" />
         </a>
         <nav class="header-navigation">
           <ul>
-            <li><a href="#">Produtos</a></li>
+            <li><a href="#" class="btn-open-dropdown">Produtos</a></li>
             <li><a href="#">Conta digital PJ</a></li>
             <li><a href="#">Quem somos</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Ajuda</a></li>
           </ul>
-
+          <div class="dropdown">
+            <div class="content">
+              <ul>
+                <li>
+                  <h3>Cartão de crédito</h3>
+                  <p>Cartão de crédito sem anuidade</p>
+                </li>
+                <li>
+                  <h3>Cartão pré pago</h3>
+                  <p>Cartão de débito internacional Neon</p>
+                </li>
+                <li>
+                  <h3>Neon Mais</h3>
+                  <p>4 saques grátis para quem compra com a Neon</p>
+                </li>
+                <li>
+                  <h3>Investimentos</h3>
+                  <p>A evolução da poupança</p>
+                </li>
+                <li>
+                  <h3>Empréstimo pessoal</h3>
+                  <p>Faça uma simulação de empréstimo pessoal</p>
+                </li>
+              </ul>
+            </div>
+          </div>
           <a href="#" class="btn-secondary isWhite">Abra sua conta digital</a>
           <button class="btn-mobile">
             <img src="./img/btn-mobile.svg" alt="Botão mobile" />
@@ -125,7 +125,7 @@
     </header>
     <section class="s-hero">
       <div class="container" role="container">
-        <div class="area-left" role="area-left">
+        <div class="area-left" role="area-left" data-aos="fade-right">
           <p class="subtitle">Abra sua conta, é só baixar o app!</p>
           <h1>A conta digital certa pra cuidar bem do seu dinheiro</h1>
           <a href="#" class="btn-primary">Abra sua conta digital</a>
@@ -162,7 +162,7 @@
             </li>
           </ul>
         </div>
-        <div class="area-right" role="area-right">
+        <div class="area-right" role="area-right" data-aos="fade-left">
           <h2>Banco 100% digital</h2>
           <div class="images">
             <img
@@ -186,7 +186,7 @@
     </section>
     <section class="s-benefits">
       <div class="container" role="container">
-        <div class="area-top" role="area-top">
+        <div class="area-top" role="area-top" data-aos="fade-right">
           <div class="mockup" role="mockup">
             <img
               src="./img/mockup.svg"
@@ -217,8 +217,7 @@
             </div>
           </div>
         </div>
-
-        <div class="area-bottom" role="area-bottom">
+        <div class="area-bottom" role="area-bottom" data-aos="fade-left">
           <div class="card-top" role="card-top">
             <h2>Resolva sua vida direto pelo app Neon!</h2>
             <ul>
@@ -309,13 +308,13 @@
 
     <section class="s-depoyments">
       <div class="container">
-        <div class="area-top">
+        <div class="area-top" data-aos="fade-right">
           <h2>
             <span>Prático, fácil, moderno</span> Você resolve tudo sem estresse
           </h2>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="depoyments">
+        <div class="depoyments" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card">
@@ -395,7 +394,7 @@
     </section>
     <section class="s-account-digital">
       <div class="container">
-        <div class="area-left">
+        <div class="area-left" data-aos="fade-right">
           <h2>
             <span>Aproveite</span> Domine o seu dinheiro com uma conta 100%
             digital
@@ -437,7 +436,7 @@
           </ul>
           <a href="#" class="btn-primary">Abra sua conta digital</a>
         </div>
-        <div class="area-right">
+        <div class="area-right" data-aos="fade-left">
           <img
             src="./img/mockup-01.svg"
             alt="Mockup Celular"
@@ -557,6 +556,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

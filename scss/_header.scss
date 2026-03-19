@@ -9,37 +9,15 @@ header {
   display: flex;
   border-bottom: 0.2rem solid rgba(255, 255, 255, 0.204);
   z-index: 10;
+  transition: all 0.3s;
+  &.active {
+    background-color: variables.$brand-blue;
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    .dropdown {
-      position: absolute;
-      top: 8rem;
-      background-color: #fff;
-      width: 100%;
-      max-width: 37.3rem;
-      .content {
-        max-width: 29.8rem;
-        border-bottom: 0.5rem solid #ffdc5c;
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 2.8rem;
-          li {
-            h3 {
-              color: variales.$gray-400;
-              font-size: 1.6rem;
-            }
-            p {
-              color: #8c8a97;
-              font-size: 1.4rem;
-            }
-          }
-        }
-      }
-    }
   }
   .header-navigation {
     position: relative;
@@ -53,11 +31,57 @@ header {
         a {
           color: variables.$white;
           font-size: 1.6rem;
+          transition: all 0.3s;
+          &:hover {
+            color: variables.$brand-yellow;
+          }
         }
       }
     }
     .btn-mobile {
       display: none;
+    }
+    .dropdown {
+      position: absolute;
+      top: 90px;
+      background-color: #fff;
+      width: 100%;
+      max-width: 37.3rem;
+      border-radius: 0.8rem;
+      opacity: 0;
+      pointer-events: none;
+      margin-top: -5rem;
+      transition: all 0.3s;
+      &.active {
+        margin-top: 0;
+        opacity: 1;
+        pointer-events: all;
+      }
+      .content {
+        padding: 2rem 0;
+        max-width: 29.8rem;
+        margin: 0 auto;
+        border-bottom: 0.5rem solid #ffdc5c;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 2.8rem;
+          li {
+            h3 {
+              color: variables.$gray-400;
+              font-size: 1.6rem;
+              &:hover {
+                cursor: pointer;
+                color: variables.$brand-blue;
+              }
+            }
+            p {
+              color: #8c8a97;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
     }
   }
   .area-menu {
